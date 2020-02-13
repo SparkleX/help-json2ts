@@ -1,0 +1,52 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "title": "Document",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "DocEntry": {
+            "type": "integer"
+        },
+        "CardCode": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32
+        },
+        "DocTotal": {
+            "description": "Document Total",
+            "type": "number"
+        },
+        "Lines": {
+            "$ref": "#/definitions/lines"
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "CardCode"
+    ],
+    "definitions": {
+        "lines": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/line"
+            }
+        },
+        "line": {
+            "type": "object",
+            "title": "DocumentDetail",
+            "properties": {
+                "LineNum": {
+                    "type": "integer"
+                },
+                "ItemCode": {
+                    "type": "string"
+                },
+                "LineTotal": {
+                    "type": "number"
+                }
+            }
+        }
+    }
+}

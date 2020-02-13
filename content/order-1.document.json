@@ -1,0 +1,19 @@
+{
+    "$schema": "../schema/document.json",
+    "DocEntry": 1,
+    "CardCode": "C001",
+    "DocTotal": 1.34,
+    "Lines" : [
+        {
+            "LineNum": 0,
+            "ItemCode": "I001",
+            "LineTotal" : 100.02
+        },
+        {
+            "LineNum": 1,
+            "ItemCode": "I002",
+            "LineTotal" : 100.01
+        }
+
+    ]
+}
