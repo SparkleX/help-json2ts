@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "json2ts -i schema/document.json -o src/document.ts",
+    "build": "json2ts --cwd=schema --declareExternallyReferenced=false -i schema/document.json -o src/document.ts",
     "start": "ts-node src/main"
 
   },

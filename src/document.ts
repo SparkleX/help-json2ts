@@ -5,8 +5,6 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export type Lines = DocumentDetail[];
-
 export interface Document {
   $schema?: string;
   DocEntry?: number;
@@ -15,11 +13,11 @@ export interface Document {
    * Document Total
    */
   DocTotal?: number;
-  Lines?: Lines;
+  Lines?: DocumentDetail[];
 }
 export interface DocumentDetail {
+  $schema?: string;
   LineNum?: number;
   ItemCode?: string;
   LineTotal?: number;
-  [k: string]: any;
 }
